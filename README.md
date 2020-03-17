@@ -19,12 +19,13 @@ vsebina zajema:
 - predpostavimo, da imamo nameščen git, ki je s konzole (ukaznega okna) dosegljiv s preprostim ukazom git
 - naredimo test dosegljivosti : git --version
 - če imate git4windows lahko git lupino (GitBASH) odprete iz kontekstualnega menija (desni miškin gumb + odpri GITBASH tule)
-- v primeru, da git-a nimate, lahko iz github-a dolpotegnete zip in ga razpakirate nekaj pod korenski imenik strežnika in spustite točko 1
+- v primeru, da git-a nimate, lahko iz github-a dolpotegnete zip in ga razpakirate nekam pod korenski imenik strežnika in spustite točko 1
 1) z git dolpotegnemo vejo, ki jo želimo; v našem primeru je to pog_01 (prvo poglavje):
 ```
-git -b pog_01 https://github.com/serhio-w02/testsys.git ; -b parameter specificir vejo, ki jo želite
+git -b pog_01 https://github.com/serhio-w02/testsys.git   // -b parameter določa vejo, ki jo želite: pog_01
 ```
 naredi se mapa testsys
+
 2) prestavimo se v mapo testsys, ažuriramo composer, ažuriramo pakete composerja:
 ```
 >cd testsys
