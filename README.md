@@ -53,3 +53,8 @@ to je to:
 če naslovite .../frontend/web in se prijavite, morate kot prijavljen uporabnik v meniju dobiti About-1
 ...
 
+opomba ali dve  : če kdo uporablja katerikoli xNIX operacijski sistem:
+yii je php skripta, če ni shell skripte, kot je yii.bat za winse, uporabite 
+*php yii migrate*
+s dovoljenji za dostop bo brez inicializacije problem; lahko uporabite init skripto ali pa izvedete *chmod -R 0777* na mapah:
+*common/runtime, backend/runtime, backend/web/assests, frontend/runtime, frontend/web/assets*
