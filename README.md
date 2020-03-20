@@ -1,5 +1,5 @@
 # testsys
-kdo bi vedel 
+iz 50_tor_17_03_2020
 
 v nadzorni del aplikacije (backend) je dodan spisek uporabnikov na osnovi obstoječega modela Users
 
