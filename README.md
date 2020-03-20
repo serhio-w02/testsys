@@ -1,18 +1,15 @@
 # testsys
-iz 51_cet_19_03_2020 in 51_pet_20_03_2020  
+iz 52_pon_23_03_2020 
 
-crud na lastnem modelu
-obladovanje migracij
+populacija vsebine uvodne strani (front-end) v skladu s spremembo v podaktovni bazi
 
-* dodan bizley/migration:^3.6 v require_dec composer.json datoteke
-* crud dosegljiv direktno na frontend/web/index.php?r=advert po tem, ko je tabela advert dodana v bazo
+predhodno smo v javni del aplikacije (front-end) že dodali možnost vnosa/spremembe/brisanja oddaje
+
+
+
 
 uporabite dolpoteg ali
 ```
-git clone -b pog_03 https://github.com/serhio-w02/testsys.git
-```
-ali kombinacijo
-```
 git clone https://github.com/serhio-w02/testsys.git
-git checkout pog_03
 ```
+
