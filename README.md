@@ -1,5 +1,5 @@
 # testsys
-iz 51_cet_19_03_2020 in 51_pet_20_03_2020   ŠE NI PUSH-a !!!!
+iz 51_cet_19_03_2020 in 51_pet_20_03_2020  
 
 crud na lastnem modelu
 obladovanje migracij
