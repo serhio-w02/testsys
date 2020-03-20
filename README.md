@@ -1,7 +1,7 @@
 # testsys
 kdo bi vedel 
 
-v nadzorni del aplikacije (backend) je dodan spisek uporabnikov na osnovi obstoječe modela Users
+v nadzorni del aplikacije (backend) je dodan spisek uporabnikov na osnovi obstoječega modela Users
 
 uporabite dolpoteg ali 
 ```
