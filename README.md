@@ -1,5 +1,5 @@
 # testsys
-iz 52_pon_23_03_2020 
+iz 52_xxx_2x_03_2020 
 
 populacija vsebine uvodne strani (front-end) v skladu s spremembo v podaktovni bazi
 
