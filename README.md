@@ -13,6 +13,13 @@ predhodno smo v javni del aplikacije (front-end) že dodali možnost vnosa/sprem
 
 uporabite dolpoteg ali
 ```
-git clone -b pog_04 https://github.com/serhio-w02/testsys.git
+>git clone -b pog_04 https://github.com/serhio-w02/testsys.git
+>cd testsys
+>composer update
+>php yii migrate
+```
+če potrebujete še testne podatke :
+```
+mysql -u uporabnik -p baza < ./common/dbinit/demo.sql
 ```
 
