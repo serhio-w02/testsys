@@ -11,9 +11,13 @@ use Yii;
  * @property string $naslov
  * @property string $povzetek
  * @property int $avtor
+ * @property string $image_src_filename						!!!-!!! dodano
+ * @property string $image_web_filename						!!!-!!! dodano
  */
 class Advert extends \yii\db\ActiveRecord
 {
+
+	public $image;
     /**
      * {@inheritdoc}
      */
@@ -32,6 +36,11 @@ class Advert extends \yii\db\ActiveRecord
             [['avtor'], 'integer'],
             [['naslov'], 'string', 'max' => 150],
             [['povzetek'], 'string', 'max' => 600],
+			
+			[['image'], 'safe'],  					// !!!-!!! r'lez za sliko
+			[['image'], 'file', 'extensions'=>'jpg, gif, png'],
+			[['image'], 'file', 'maxSize'=>'100000'],
+			[['image_src_filename', 'image_web_filename'], 'string', 'max' => 200],
         ];
     }
 
@@ -45,6 +54,9 @@ class Advert extends \yii\db\ActiveRecord
             'naslov' => Yii::t('app', 'Naslov'),
             'povzetek' => Yii::t('app', 'Povzetek'),
             'avtor' => Yii::t('app', 'Avtor'),
+			
+			'image_src_filename' => Yii::t('app', 'Filename'),  			// !!!-!!! se za prevode
+			'image_web_filename' => Yii::t('app', 'Pathname'),
         ];
     }
 

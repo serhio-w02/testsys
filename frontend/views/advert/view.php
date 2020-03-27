@@ -33,7 +33,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'naslov',
             'povzetek',
             'avtor',
+			
+			'image_web_filename',        // !!!--!!! dodana
+			'image_src_filename',
         ],
     ]) ?>
 
+	  <?php                    // če pa slikca je, jo pokaži spodaj
+	if ($model->image_web_filename!='') {
+		echo '<br /><p><img src="'.Yii::$app->homeUrl. '/../uploads/status/'.$model->image_web_filename.'"></p>';
+	}
+  ?> 
+	
 </div>

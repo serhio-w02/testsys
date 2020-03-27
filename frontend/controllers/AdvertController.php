@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use yii\web\UploadedFile;                  // !!!-!!! dodano
+
 /**
  * AdvertController implements the CRUD actions for Advert model.
  */
@@ -62,6 +64,8 @@ class AdvertController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+	 
+	/* originale .. commented out 
     public function actionCreate()
     {
         $model = new Advert();
@@ -74,6 +78,31 @@ class AdvertController extends Controller
             'model' => $model,
         ]);
     }
+	*/
+	public function actionCreate(){
+	$model = new Advert();
+	
+	if ($model->load(Yii::$app->request->post())) {
+		$image = UploadedFile::getInstance($model, 'image');
+		if (!is_null($image)) {
+			$model->image_src_filename = $image->name;
+			echo $model->image_src_filename; //die();
+			$zool = explode(".", $image->name);
+			$ext = end($zool);                           // generiramo unikatna imena da se izognemo duplikatom
+			$model->image_web_filename = Yii::$app->security->generateRandomString().".{$ext}";
+			// pot do shranjene datoteke, nastavimo uploadPath v  Yii::$app->params
+			Yii::$app->params['uploadPath'] = Yii::$app->basePath . '/web/uploads/status/';
+			$path = Yii::$app->params['uploadPath'] . $model->image_web_filename;
+			$image->saveAs($path);
+		}
+		if ($model->save()) {
+			return $this->redirect(['view', 'id' => $model->id]);
+		}  else {
+			var_dump ($model->getErrors()); die();
+		}
+	}
+	return $this->render('create', [   'model' => $model,  ]);
+}
 
     /**
      * Updates an existing Advert model.

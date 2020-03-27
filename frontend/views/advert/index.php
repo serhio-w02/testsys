@@ -29,6 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'naslov',
+			
+			[			// !!!--!!! custom column
+			'attribute' => 'Image',             // utakne mickeno slikco (50px) za naslov
+			'format' => 'raw',
+			'value' => function ($model) {
+				if ($model->image_web_filename!=''){    // !!!-!!! glupog li trika pri url spodaj !
+					return '<img src="'.Yii::$app->homeUrl. '/../uploads/status/'.$model->image_web_filename.'" width="50px" height="auto">';
+				}
+				else 
+					return 'no image';
+				},
+			],
+			
             'povzetek',
             'avtor',
 
