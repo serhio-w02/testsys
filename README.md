@@ -22,4 +22,5 @@ uporabite dolpoteg ali
 ```
 mysql -u uporabnik -p baza < ./common/dbinit/demo.sql
 ```
+uname/pass ta kot v demonstraciji : admin123/admin123
 
