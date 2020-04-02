@@ -13,7 +13,7 @@ spremenjen winget za advert : sedaj omogoča prikaz slike
 
 uporabite dolpoteg ali
 ```
-git clone https://github.com/serhio-w02/testsys.git
+git clone -b pog_05 https://github.com/serhio-w02/testsys.git
 cd testsys
 ```
 nato izvedite
