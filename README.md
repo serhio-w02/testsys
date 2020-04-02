@@ -1,19 +1,21 @@
 # testsys
-iz 53_cet_26_03_2020 
+iz 55_cet_02_04_2020 
 
-populacija vsebine uvodne strani (front-end) v skladu s spremembo v podaktovni bazi
+theming
 
-predhodno smo v javni del aplikacije (front-end) že dodali možnost vnosa/spremembe/brisanja oddaje
+podaja princip spreminjanja tem v Yii2
 
-sprememba modela
-spremenjene vizualizacije v views/advert (index, _form, _view)
-spremenjen kontroler : omogoča nalaganje slike
-spremenjen winget za advert : sedaj omogoča prikaz slike
+rezultat je dodanih par bootstrap 3 tem
+
+opomba: ta kos se ukvarja zgolj z css/js/fonti ne pa tudi z definicijo in grupiranjem elementov; to je bilo
+predhodno že obdelano
+
+
 
 
 uporabite dolpoteg ali
 ```
-git clone https://github.com/serhio-w02/testsys.git
+git clone -b pog_06 https://github.com/serhio-w02/testsys.git
 cd testsys
 ```
 nato izvedite
