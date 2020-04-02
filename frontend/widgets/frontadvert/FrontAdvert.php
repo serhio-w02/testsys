@@ -15,7 +15,7 @@ class FrontAdvert extends Widget {
 
     public function run()
     {
-	    $faker = Factory::create();
+	    //$faker = Factory::create();
 	    //$faker->imageUrl($width = 640, $height = 480) ;
 	
         // render title
