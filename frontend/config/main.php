@@ -12,6 +12,14 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+	    // tukaj nastaviš theme uporabljeno v frontendu 
+        // - template comes with: 'default', 'dark', 'lite','united' and 'cerulean'
+        'view' => [
+            'theme' => [
+                'pathMap' => ['@app/views' => '@webroot/themes/cerulean/views'],
+                'baseUrl' => '@web/themes/cerulean',
+            ],
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
